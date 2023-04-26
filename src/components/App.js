@@ -3,10 +3,14 @@ import '../styles/App.css';
 
 const App = () => {
 //code here 
+   const [isBlue, setIsBlue] = useState(false);
+  const handleClick = () => {
+    setIsBlue(!isBlue);
+  };
   return (
     <div id="main">
-      <p className={} >Newton School</p>
-      <button id='button' onClick={}>Change Style</button>
+      <p className={isBlue ? "blue-text" : "red-text"} >Newton School</p>
+      <button id='button' onClick={handleClick}>Change Style</button>
     </div>
   )
 }
